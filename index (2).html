@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahbuba | Academic Portfolio</title>
+<meta name="description" content="Academic portfolio of Mahbuba - projects, skills and education.">
+<meta property="og:title" content="Mahbuba | Academic Portfolio">
+<meta property="og:description" content="Projects, skills and education.">
+<meta property="og:image" content="photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --brand:#0f4c5c; --brand-dark:#0a3540; --accent:#e36414;
+    --bg:#f6f8f9; --card:#ffffff; --text:#1c2b33; --muted:#5b6b73; --line:#e2e8eb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+  header{background:linear-gradient(135deg,var(--brand),var(--brand-dark));color:#fff;text-align:center;padding:22px 16px 0}
+  header h1{font-size:1rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+  header i.top{font-size:1.6rem;margin:8px 0 14px;display:block;opacity:.9}
+  nav{display:flex;overflow-x:auto;justify-content:center;gap:4px;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav button{background:none;border:none;color:#cfe3e8;padding:14px 18px;font:500 .95rem 'Inter',sans-serif;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent}
+  nav button.active{color:#fff;border-bottom-color:var(--accent);background:rgba(255,255,255,.08)}
+  main{max-width:860px;margin:0 auto;padding:28px 18px 50px}
+  section.tab{display:none;animation:fade .35s ease}
+  section.tab.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .profile{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .profile img{width:170px;height:210px;object-fit:cover;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.12);background:#dfe7ea}
+  .profile h2{font-size:1.6rem;line-height:1.25}
+  .role{color:var(--muted);font-weight:600;margin:4px 0 8px}
+  .links{list-style:none;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+  .links li{margin:8px 0}
+  .links a{color:var(--brand);text-decoration:none;font-weight:500}
+  .links a:hover{color:var(--accent)}
+  .links i{width:24px;color:var(--brand)}
+  h3.sec{font-size:1.35rem;color:var(--brand);margin:34px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+  p{margin-bottom:12px}
+  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:10px;padding:16px 18px;margin-bottom:14px}
+  .card h4{color:var(--brand);font-size:1.05rem}
+  .card small{color:var(--muted);display:block;margin-bottom:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+  .chips span{font-family:'JetBrains Mono',monospace;font-size:.85rem;background:#fff;border:1px solid var(--line);border-radius:6px;padding:6px 12px}
+  h5{font-size:1rem;margin:18px 0 8px}
+  .project{border-left-color:var(--accent)}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  .btns a{background:var(--brand);color:#fff;text-decoration:none;padding:8px 14px;border-radius:8px;font-size:.88rem;font-weight:500}
+  .btns a.alt{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+  .btns a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:22px 14px;border-top:1px solid var(--line);background:#fff}
+  @media(max-width:520px){.profile{justify-content:center}.profile img{width:100%;height:auto;max-height:340px}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Academic Portfolio</h1>
+  <i class="fa-solid fa-graduation-cap top"></i>
+  <nav id="tabs">
+    <button class="active" data-tab="overview">Overview</button>
+    <button data-tab="education">Education</button>
+    <button data-tab="skills">Technical Skills</button>
+    <button data-tab="projects">Projects</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- OVERVIEW -->
+  <section class="tab active" id="overview">
+    <div class="profile">
+      <img src="photo.jpg" alt="Profile photo">
+      <div>
+        <h2>Mahbuba</h2>
+        <div class="role">Undergraduate ICT Student</div>
+        <div>Department of Information and Communication Technology<br><strong>Mawlana Bhashani Science and Technology University (MBSTU)</strong><br>Santosh, Tangail-1902, Bangladesh</div>
+        <ul class="links">
+          <li><i class="fa-solid fa-envelope"></i><a href="mailto:it25040@mbstu.ac.bd">it25040@mbstu.ac.bd</a></li>
+          <li><i class="fa-brands fa-github"></i><a href="https://github.com/mahbuba03" target="_blank">GitHub Profile</a></li>
+          <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/mahbuba-nur-a27b02410" target="_blank">LinkedIn Profile</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sec">About Me</h3>
+    <p>Welcome to my academic homepage. I am <strong>Mahbuba</strong>, an undergraduate student passionate about software development, information systems and cybersecurity fundamentals.</p>
+    <p>I enjoy turning ideas into working applications, from native desktop tools to clean, well-documented repositories.</p>
+
+    <h3 class="sec">Primary Academic Focus</h3>
+    <div class="card"><h4>Software Development</h4><p>C++ and Qt desktop applications and clean project structure.</p></div>
+    <div class="card"><h4>Cybersecurity Basics</h4><p>File hashing, signature-based detection and safe, educational malware analysis concepts.</p></div>
+    <div class="card"><h4>Information Systems</h4><p>Understanding how technology supports data-driven decision making.</p></div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="tab" id="education">
+    <h3 class="sec" style="margin-top:0">Education &amp; Academic Standing</h3>
+    <div class="card">
+      <h4>B.Sc. (Engineering) in Information &amp; Communication Technology</h4>
+      <small>Mawlana Bhashani Science and Technology University (MBSTU) &nbsp;|&nbsp; Session: 2024-25</small>
+      <em>Current Standing: Year 2, Semester 1 (2.1)</em>
+    </div>
+
+    <h3 class="sec">Coursework &amp; Lab Modules</h3>
+    <div class="card"><h4>ICT-1200</h4>Project (Malware Signature Scanner)</div>
+    <div class="card"><h4>ADD COURSE CODE</h4>Add course name</div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="tab" id="skills">
+    <h3 class="sec" style="margin-top:0">Technical Skills &amp; Tools</h3>
+    <h5>Programming Languages</h5>
+    <div class="chips"><span>C</span><span>C++</span><span>Python</span></div>
+    <h5>Frameworks &amp; Libraries</h5>
+    <div class="chips"><span>Qt 6</span><span>Qt Widgets</span><span>CMake</span></div>
+    <h5>Core Competencies</h5>
+    <div class="chips"><span>Data Structures</span><span>Problem Solving</span><span>File Hashing (MD5 / SHA-256)</span><span>OOP</span></div>
+    <h5>Development Tools</h5>
+    <div class="chips"><span>VS Code</span><span>Qt Creator</span><span>Git</span><span>GitHub</span><span>LaTeX</span></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="tab" id="projects">
+    <h3 class="sec" style="margin-top:0">Projects</h3>
+    <div class="card project">
+      <h4>Malware Signature Scanner (Educational)</h4>
+      <small>Qt 6 Widgets + C++ &nbsp;|&nbsp; CMake &nbsp;|&nbsp; Course Project: ICT-1200</small>
+      <p>A desktop application that scans files and folders (recursively) against a database of known-bad hashes, flags matches and simulates quarantine by moving flagged files to a sandbox folder. Built to demonstrate how signature-based antivirus works, using only harmless test files.</p>
+      <div class="chips"><span>Qt Widgets</span><span>C++17</span><span>MD5 / SHA-256</span><span>CMake</span></div>
+      <div class="btns">
+        <a href="https://github.com/mahbuba03/Malware-Signature-Scanner" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a>
+        <a class="alt" href="https://youtu.be/NNxZ-l7LpVY" target="_blank"><i class="fa-brands fa-youtube"></i> Demo Video</a>
+        <a class="alt" href="https://github.com/mahbuba03/Malware-Signature-Scanner/blob/main/docs/Report.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Report</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2026 Mahbuba | Hosted on GitHub Pages</footer>
+
+<script>
+  const buttons = document.querySelectorAll('#tabs button');
+  const tabs = document.querySelectorAll('section.tab');
+  function show(id){
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+    tabs.forEach(t => t.classList.toggle('active', t.id === id));
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
+</script>
+</body>
+</html>
