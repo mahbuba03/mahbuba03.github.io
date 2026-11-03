@@ -1,158 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mahbuba | Academic Portfolio</title>
 <meta name="description" content="Academic portfolio of Mahbuba - projects, skills and education.">
 <meta property="og:title" content="Mahbuba | Academic Portfolio">
 <meta property="og:description" content="Projects, skills and education.">
-<meta property="og:image" content="WhatsApp Image 2026-11-03 at 7.49.08 PM.jpeg">
+<meta property="og:image" content="WhatsApp%20Image%202026-11-03%20at%206.40.14%20PM.jpeg">
+<link rel="icon" type="image/png" href="mbstu-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --brand:#0f4c5c; --brand-dark:#0a3540; --accent:#e36414;
-    --bg:#f6f8f9; --card:#ffffff; --text:#1c2b33; --muted:#5b6b73; --line:#e2e8eb;
+:root{
+  --paper:#EEF2F6; --card:#FFFFFF; --ink:#0F1B2D; --muted:#4B5A6E;
+  --line:#CBD5E1; --accent:#0B6E6E; --accent-soft:#D6EEEC; --flag:#B4531A;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1722; --card:#17212F; --ink:#E8EEF5; --muted:#9FB0C3;
+    --line:#2B3A4E; --accent:#5FD0C6; --accent-soft:#16363A; --flag:#F0A36B;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-  header{background:linear-gradient(135deg,var(--brand),var(--brand-dark));color:#fff;text-align:center;padding:22px 16px 0}
-  header h1{font-size:1rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
-  header i.top{font-size:1.6rem;margin:8px 0 14px;display:block;opacity:.9}
-  nav{display:flex;overflow-x:auto;justify-content:center;gap:4px;scrollbar-width:none}
-  nav::-webkit-scrollbar{display:none}
-  nav button{background:none;border:none;color:#cfe3e8;padding:14px 18px;font:500 .95rem 'Inter',sans-serif;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent}
-  nav button.active{color:#fff;border-bottom-color:var(--accent);background:rgba(255,255,255,.08)}
-  main{max-width:860px;margin:0 auto;padding:28px 18px 50px}
-  section.tab{display:none;animation:fade .35s ease}
-  section.tab.active{display:block}
-  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  .profile{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-  .profile img{width:170px;height:210px;object-fit:cover;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.12);background:#dfe7ea}
-  .profile h2{font-size:1.6rem;line-height:1.25}
-  .role{color:var(--muted);font-weight:600;margin:4px 0 8px}
-  .links{list-style:none;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
-  .links li{margin:8px 0}
-  .links a{color:var(--brand);text-decoration:none;font-weight:500}
-  .links a:hover{color:var(--accent)}
-  .links i{width:24px;color:var(--brand)}
-  h3.sec{font-size:1.35rem;color:var(--brand);margin:34px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
-  p{margin-bottom:12px}
-  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:10px;padding:16px 18px;margin-bottom:14px}
-  .card h4{color:var(--brand);font-size:1.05rem}
-  .card small{color:var(--muted);display:block;margin-bottom:6px}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
-  .chips span{font-family:'JetBrains Mono',monospace;font-size:.85rem;background:#fff;border:1px solid var(--line);border-radius:6px;padding:6px 12px}
-  h5{font-size:1rem;margin:18px 0 8px}
-  .project{border-left-color:var(--accent)}
-  .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-  .btns a{background:var(--brand);color:#fff;text-decoration:none;padding:8px 14px;border-radius:8px;font-size:.88rem;font-weight:500}
-  .btns a.alt{background:#fff;color:var(--brand);border:1px solid var(--brand)}
-  .btns a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
-  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:22px 14px;border-top:1px solid var(--line);background:#fff}
-  @media(max-width:520px){.profile{justify-content:center}.profile img{width:100%;height:auto;max-height:340px}}
+}
+:root[data-theme="dark"]{
+    --paper:#0F1722; --card:#17212F; --ink:#E8EEF5; --muted:#9FB0C3;
+    --line:#2B3A4E; --accent:#5FD0C6; --accent-soft:#16363A; --flag:#F0A36B;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 "Source Sans 3",system-ui,sans-serif}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15;margin:0}
+
+/* top bar */
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;align-items:center;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+nav strong{font-family:"Bricolage Grotesque",sans-serif;font-size:1.05rem;margin-right:auto}
+nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{position:relative;padding:56px 0 48px;display:grid;grid-template-columns:240px 1fr;gap:44px;align-items:center;overflow:hidden}
+.hero>*{position:relative;z-index:1}
+.hero .wm{position:absolute;z-index:0;right:0;top:50%;transform:translateY(-50%);width:280px;text-align:center;opacity:.12;pointer-events:none}
+.hero>div:last-child{max-width:600px}
+.hero .wm img{width:260px;height:auto;display:block;margin:0 auto}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero .wm{opacity:.16}:root:not([data-theme="light"]) .hero .wm img{filter:grayscale(1) invert(1)}}
+:root[data-theme="dark"] .hero .wm{opacity:.16}
+:root[data-theme="dark"] .hero .wm img{filter:grayscale(1) invert(1)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.2rem);font-weight:800;letter-spacing:-.02em}
+.role{font-size:1.15rem;font-weight:600;margin:8px 0 14px;color:var(--accent)}
+.uni{margin:0 0 4px;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.3rem;line-height:1.3}
+.dept{color:var(--muted);margin:0 0 24px}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--paper)}
+.btn.alt{color:var(--accent)}
+.btn:hover{opacity:.88}
+.pic{width:240px;aspect-ratio:1;border-radius:50%;border:6px solid var(--card);box-shadow:0 0 0 2px var(--accent);overflow:hidden;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font:800 5rem "Bricolage Grotesque",sans-serif;color:var(--accent)}
+.pic img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* sections */
+section{border-top:1px solid var(--line);padding:44px 0;display:grid;grid-template-columns:200px 1fr;gap:32px}
+section>h2{font-size:1.5rem}
+section p{margin:0 0 14px;max-width:65ch}
+.focus{display:grid;gap:18px}
+.focus h3{font-size:1.1rem;margin-bottom:2px}
+.focus p{margin:0;color:var(--muted)}
+.edu h3{font-size:1.15rem}
+.edu p{color:var(--muted);margin:4px 0 0}
+.skills dt{font-weight:600;margin-top:14px}
+.skills dt:first-child{margin-top:0}
+.skills dd{margin:6px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--accent-soft);color:var(--ink);padding:3px 12px;border-radius:999px;font-size:.92rem;font-weight:600}
+
+/* project */
+.project{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:10px;padding:26px}
+.project h3{font-size:1.5rem}
+.stack{color:var(--muted);margin:4px 0 14px;font-size:.95rem}
+.project .links{margin-top:18px}
+.project .btn{padding:8px 14px;font-size:.95rem}
+
+.contact-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;max-width:520px}
+.contact-list a{display:flex;align-items:center;gap:14px;padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);font-weight:600}
+.contact-list a:hover{border-color:var(--accent);color:var(--accent)}
+.contact-list svg{width:24px;height:24px;flex:none;color:var(--accent)}
+.contact-list small{display:block;font-weight:400;color:var(--muted);font-size:.88rem}
+
+/* theme button */
+.tbtn{font:600 .9rem "Source Sans 3",sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+.tbtn:hover{border-color:var(--accent);color:var(--accent)}
+
+
+/* pull-cord lamp (theme switch) */
+.lamp{position:relative;width:40px;height:30px;padding:0;border:0;background:none;cursor:pointer;color:var(--muted)}
+.lamp svg{position:absolute;left:0;top:-14px;width:40px;height:130px;overflow:visible;cursor:pointer}
+.lamp .shade{fill:var(--accent)}
+.lamp .knob{fill:var(--accent)}
+.lamp .bulb{fill:#6B7686;transition:fill .3s}
+.lamp .glow{opacity:0;transition:opacity .3s}
+.lamp[data-on="true"] .bulb{fill:#FFD84D}
+.lamp[data-on="true"] .glow{opacity:.75}
+.lamp .pull{transition:transform .18s ease}
+.lamp.pulled .pull{transform:translateY(12px)}
+
+/* typing line */
+.typed{margin:0 0 22px;font:700 1.05rem "Bricolage Grotesque",sans-serif;color:var(--muted)}
+.typed b{color:var(--ink);font-weight:700}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--accent);margin-left:3px;vertical-align:-.2em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* scroll reveal */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* coursework */
+.courses{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.course{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;transition:transform .25s,border-color .25s}
+.course:hover{transform:translateY(-4px);border-color:var(--accent)}
+.course small{color:var(--accent);font-weight:600;letter-spacing:.03em}
+.course h3{font-size:1.05rem;margin:4px 0 4px}
+.course p{margin:0;color:var(--muted);font-size:.93rem}
+
+/* project screenshots */
+.project{transition:transform .25s,box-shadow .25s}
+.project:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.14)}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 18px}
+.shots figure{margin:0;overflow:hidden;border-radius:8px;border:1px solid var(--line);background:var(--paper)}
+.shots img{width:100%;height:140px;object-fit:cover;object-position:top;display:block;transition:transform .35s;cursor:zoom-in}
+.shots figure:hover img{transform:scale(1.08)}
+.shots figcaption{font-size:.82rem;color:var(--muted);padding:6px 10px}
+#lb{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:100%;border-radius:8px}
+
+/* progress bar + active nav */
+#bar{position:fixed;top:0;left:0;width:100%;height:3px;background:var(--accent);transform-origin:left;transform:scaleX(0);z-index:30}
+nav a.active{color:var(--accent);box-shadow:0 2px 0 var(--accent)}
+section{scroll-margin-top:64px}
+
+/* project details */
+.project h4{font:700 1rem "Bricolage Grotesque",system-ui,sans-serif;margin:18px 0 6px}
+.project ul{margin:0 0 6px;padding-left:20px;color:var(--muted)}
+.project li{margin:4px 0}
+footer{border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:.92rem}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:26px;padding-top:36px;justify-items:start}
+  .pic{width:180px;font-size:3.6rem}
+  .hero .wm{width:200px;right:-10px;top:auto;bottom:0;transform:none;opacity:.10}
+  .hero>div:last-child{max-width:none}
+  .hero .wm img{width:120px}
+    section{grid-template-columns:1fr;gap:16px;padding:34px 0}
+  .shots{grid-template-columns:1fr}
+  .shots img{height:180px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}.caret{animation:none}}
 </style>
+<script>document.documentElement.className+=" js"</script>
 </head>
 <body>
+<div id="bar" aria-hidden="true"></div>
 
-<header>
-  <h1>Academic Portfolio</h1>
-  <i class="fa-solid fa-graduation-cap top"></i>
-  <nav id="tabs">
-    <button class="active" data-tab="overview">Overview</button>
-    <button data-tab="education">Education</button>
-    <button data-tab="skills">Technical Skills</button>
-    <button data-tab="projects">Projects</button>
-  </nav>
-</header>
+<nav>
+  <div class="wrap">
+    <strong>Mahbuba</strong>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#coursework">Coursework</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="lamp" id="themeBtn" type="button" aria-label="Pull the cord to switch light or dark theme" title="Pull the cord" data-on="false">
+      <svg viewBox="0 0 40 130" aria-hidden="true">
+        <defs><radialGradient id="glow"><stop offset="0" stop-color="#FFE27A" stop-opacity=".9"/><stop offset="1" stop-color="#FFE27A" stop-opacity="0"/></radialGradient></defs>
+        <circle class="glow" cx="20" cy="40" r="22" fill="url(#glow)"/>
+        <g class="pull"><line x1="28" y1="16" x2="28" y2="96" stroke="currentColor" stroke-width="1.6"/><circle cx="28" cy="102" r="5" class="knob"/></g>
+        <line x1="20" y1="0" x2="20" y2="14" stroke="currentColor" stroke-width="1.6"/>
+        <path class="shade" d="M5 34 Q5 14 20 14 Q35 14 35 34 Z"/>
+        <circle class="bulb" cx="20" cy="38" r="4.5"/>
+      </svg>
+    </button>
+  </div>
+</nav>
 
-<main>
+<main class="wrap">
 
-  <!-- OVERVIEW -->
-  <section class="tab active" id="overview">
-    <div class="profile">
-      <img src="WhatsApp Image 2026-11-03 at 7.49.08 PM.jpeg" alt="Profile photo">
+  <header class="hero">
+    <div class="wm" aria-hidden="true">
+      <img src="mbstu-logo.png" alt="" onerror="this.remove()">
+    </div>
+    <div class="pic">
+      <img src="WhatsApp%20Image%202026-11-03%20at%206.40.14%20PM.jpeg" alt="Portrait of Mahbuba" onerror="this.remove()">
+    </div>
+    <div>
+      <h1>Mahbuba</h1>
+      <p class="role">Undergraduate student, Information and Communication Technology</p>
+      <p class="uni">Mawlana Bhashani Science and Technology University (MBSTU)</p>
+      <p class="dept">Department of ICT, Santosh, Tangail-1902, Bangladesh</p>
+      <p class="typed">I am a <b id="typed">C++ developer</b><span class="caret" aria-hidden="true"></span></p>
+      <div class="links">
+        <a class="btn main" href="#projects">See my project</a>
+        <a class="btn alt" href="https://github.com/mahbuba03">GitHub</a>
+        <a class="btn alt" href="https://www.linkedin.com/in/mahbuba-nur-a27b02410">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="reveal">
+    <h2>About me</h2>
+    <div>
+      <p>I’m Mahbuba, an undergraduate student interested in software development, information systems and cybersecurity fundamentals.</p>
+      <p>I like turning ideas into working applications, from native desktop tools to clean, well-documented repositories.</p>
+      <div class="focus" style="margin-top:22px">
+        <div><h3>Software development</h3><p>C++ and Qt desktop applications, with a clear project structure.</p></div>
+        <div><h3>Cybersecurity basics</h3><p>File hashing, signature-based detection and safe, educational malware analysis concepts.</p></div>
+        <div><h3>Information systems</h3><p>How technology supports data-driven decisions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="reveal">
+    <h2>Education</h2>
+    <div class="edu">
+      <h3>B.Sc. (Engineering) in Information &amp; Communication Technology</h3>
+      <p>Mawlana Bhashani Science and Technology University (MBSTU)</p>
+      <p>Current Standing: Year 2, Semester 1 (2.1) | Session: 2024-25</p>
+      <p style="margin-top:14px"><strong>Coursework:</strong> ICT-1200, Project (Malware Signature Scanner)</p>
+    </div>
+  </section>
+
+    <section id="coursework" class="reveal">
+    <h2>Coursework</h2>
+    <div class="courses">
+      <div class="course"><small>ICT-1200</small><h3>Project (Project-1)</h3><p>Malware Signature Scanner in C++ / Qt 6, supervised by Dr. Ziaur Rahman.</p></div>
+    </div>
+  </section>
+
+  <section id="skills" class="reveal">
+    <h2>Skills and tools</h2>
+    <dl class="skills" style="margin:0">
+      <dt>Programming languages</dt>
+      <dd><span class="chip">C</span><span class="chip">C++</span><span class="chip">Python</span></dd>
+      <dt>Frameworks and libraries</dt>
+      <dd><span class="chip">Qt 6</span><span class="chip">Qt Widgets</span><span class="chip">CMake</span></dd>
+      <dt>Core competencies</dt>
+      <dd><span class="chip">Data structures</span><span class="chip">Problem solving</span><span class="chip">File hashing (MD5 / SHA-256)</span><span class="chip">OOP</span></dd>
+      <dt>Development tools</dt>
+      <dd><span class="chip">VS Code</span><span class="chip">Qt Creator</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">LaTeX</span></dd>
+    </dl>
+  </section>
+
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+    <article class="project">
+      <h3>Malware Signature Scanner (Educational)</h3>
+      <p class="stack">Qt 6 Widgets, C++17, CMake. Course project for ICT-1200.</p>
+      <div class="shots">
+        <figure><img src="https://raw.githubusercontent.com/mahbuba03/Malware-Signature-Scanner/main/docs/screenshots/main.png.webp" alt="Main window of the scanner" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>Main window</figcaption></figure>
+        <figure><img src="https://raw.githubusercontent.com/mahbuba03/Malware-Signature-Scanner/main/docs/screenshots/result.png.webp" alt="Scan results" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>Scan result</figcaption></figure>
+        <figure><img src="https://raw.githubusercontent.com/mahbuba03/Malware-Signature-Scanner/main/docs/screenshots/quarantine.png.webp" alt="Quarantine view" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>Quarantine</figcaption></figure>
+      </div>
+      <p>A desktop application that scans files and folders recursively against a database of known-bad hashes, flags matches and simulates quarantine by moving flagged files to a sandbox folder. It shows how signature-based antivirus works, using only harmless test files.</p>
+      <h4>Key features</h4>
+      <ul>
+        <li>Recursive scan of files and folders</li>
+        <li>MD5 and SHA-256 hashing of each file</li>
+        <li>Matches files against a database of known-bad hashes</li>
+        <li>Simulated quarantine: flagged files move to a sandbox folder</li>
+        <li>Safe by design: works only with harmless test files</li>
+      </ul>
+      <h4>What I learned</h4>
+      <ul>
+        <li>How signature-based detection works in antivirus tools</li>
+        <li>Building a desktop GUI with Qt 6 Widgets and C++17</li>
+        <li>Organising a project with CMake and documenting it on GitHub</li>
+      </ul>
       <div>
-        <h2>Mahbuba</h2>
-        <div class="role">Undergraduate ICT Student</div>
-        <div>Department of Information and Communication Technology<br><strong>Mawlana Bhashani Science and Technology University (MBSTU)</strong><br>Santosh, Tangail-1902, Bangladesh</div>
-        <ul class="links">
-          <li><i class="fa-solid fa-envelope"></i><a href="mailto:it25040@mbstu.ac.bd">it25040@mbstu.ac.bd</a></li>
-          <li><i class="fa-brands fa-github"></i><a href="https://github.com/mahbuba03" target="_blank">GitHub Profile</a></li>
-          <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/mahbuba-nur-a27b02410" target="_blank">LinkedIn Profile</a></li>
-        </ul>
+        <span class="chip">Qt Widgets</span> <span class="chip">C++17</span> <span class="chip">MD5 / SHA-256</span> <span class="chip">CMake</span>
       </div>
-    </div>
-
-    <h3 class="sec">About Me</h3>
-    <p>Welcome to my academic homepage. I am <strong>Mahbuba</strong>, an undergraduate student passionate about software development, information systems and cybersecurity fundamentals.</p>
-    <p>I enjoy turning ideas into working applications, from native desktop tools to clean, well-documented repositories.</p>
-
-    <h3 class="sec">Primary Academic Focus</h3>
-    <div class="card"><h4>Software Development</h4><p>C++ and Qt desktop applications and clean project structure.</p></div>
-    <div class="card"><h4>Cybersecurity Basics</h4><p>File hashing, signature-based detection and safe, educational malware analysis concepts.</p></div>
-    <div class="card"><h4>Information Systems</h4><p>Understanding how technology supports data-driven decision making.</p></div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="tab" id="education">
-    <h3 class="sec" style="margin-top:0">Education &amp; Academic Standing</h3>
-    <div class="card">
-      <h4>B.Sc. (Engineering) in Information &amp; Communication Technology</h4>
-      <small>Mawlana Bhashani Science and Technology University (MBSTU) &nbsp;|&nbsp; Session: 2024-25</small>
-      <em>Current Standing: Year 2, Semester 1 (2.1)</em>
-    </div>
-
-    <h3 class="sec">Coursework &amp; Lab Modules</h3>
-    <div class="card"><h4>ICT-1200</h4>Project (Malware Signature Scanner)</div>
-    <div class="card"><h4>ADD COURSE CODE</h4>Add course name</div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="tab" id="skills">
-    <h3 class="sec" style="margin-top:0">Technical Skills &amp; Tools</h3>
-    <h5>Programming Languages</h5>
-    <div class="chips"><span>C</span><span>C++</span><span>Python</span></div>
-    <h5>Frameworks &amp; Libraries</h5>
-    <div class="chips"><span>Qt 6</span><span>Qt Widgets</span><span>CMake</span></div>
-    <h5>Core Competencies</h5>
-    <div class="chips"><span>Data Structures</span><span>Problem Solving</span><span>File Hashing (MD5 / SHA-256)</span><span>OOP</span></div>
-    <h5>Development Tools</h5>
-    <div class="chips"><span>VS Code</span><span>Qt Creator</span><span>Git</span><span>GitHub</span><span>LaTeX</span></div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="tab" id="projects">
-    <h3 class="sec" style="margin-top:0">Projects</h3>
-    <div class="card project">
-      <h4>Malware Signature Scanner (Educational)</h4>
-      <small>Qt 6 Widgets + C++ &nbsp;|&nbsp; CMake &nbsp;|&nbsp; Course Project: ICT-1200</small>
-      <p>A desktop application that scans files and folders (recursively) against a database of known-bad hashes, flags matches and simulates quarantine by moving flagged files to a sandbox folder. Built to demonstrate how signature-based antivirus works, using only harmless test files.</p>
-      <div class="chips"><span>Qt Widgets</span><span>C++17</span><span>MD5 / SHA-256</span><span>CMake</span></div>
-      <div class="btns">
-        <a href="https://github.com/mahbuba03/Malware-Signature-Scanner" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a>
-        <a class="alt" href="https://youtu.be/NNxZ-l7LpVY" target="_blank"><i class="fa-brands fa-youtube"></i> Demo Video</a>
-        <a class="alt" href="https://github.com/mahbuba03/Malware-Signature-Scanner/blob/main/docs/Report.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Report</a>
+      <div class="links">
+        <a class="btn main" href="https://github.com/mahbuba03/Malware-Signature-Scanner">Source code</a>
+        <a class="btn alt" href="https://youtu.be/NNxZ-l7LpVY">Demo video</a>
+        <a class="btn alt" href="https://github.com/mahbuba03/Malware-Signature-Scanner/blob/main/docs/Report.pdf">Report (PDF)</a>
       </div>
-    </div>
+    </article>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li><a href="mailto:it25040@mbstu.ac.bd">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,7 12,13 21,7"/></svg>
+        <span>Email<small>it25040@mbstu.ac.bd</small></span></a></li>
+      <li><a href="https://github.com/mahbuba03">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        <span>GitHub<small>github.com/mahbuba03</small></span></a></li>
+      <li><a href="https://www.linkedin.com/in/mahbuba-nur-a27b02410">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <span>LinkedIn<small>Mahbuba Nur</small></span></a></li>
+    </ul>
   </section>
 
 </main>
 
-<footer>© 2026 Mahbuba | Hosted on GitHub Pages</footer>
+<footer>
+  <div class="wrap">© 2026 Mahbuba. Hosted on GitHub Pages.</div>
+</footer>
 
+<div id="lb" aria-hidden="true"><img alt=""></div>
 <script>
-  const buttons = document.querySelectorAll('#tabs button');
-  const tabs = document.querySelectorAll('section.tab');
-  function show(id){
-    buttons.forEach(b => b.classList.toggle('active', b.dataset.tab === id));
-    tabs.forEach(t => t.classList.toggle('active', t.id === id));
-    window.scrollTo({top:0,behavior:'smooth'});
+(function(){
+  var root=document.documentElement,btn=document.getElementById('themeBtn');
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function eff(){return root.getAttribute('data-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
+  function label(){btn.setAttribute('data-on',eff()==='light'?'true':'false')}
+  function setTheme(t){root.setAttribute('data-theme',t);label();try{localStorage.setItem('theme',t)}catch(e){}}
+  try{var sv=localStorage.getItem('theme');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
+  label();
+  btn.addEventListener('click',function(){btn.classList.add('pulled');setTimeout(function(){btn.classList.remove('pulled')},220);setTheme(eff()==='dark'?'light':'dark')});
+
+  var words=['C++ developer','Qt desktop app builder','cybersecurity learner','ICT student'];
+  var el=document.getElementById('typed');
+  if(!reduce){
+    var w=0,c=0,del=false;
+    (function tick(){
+      var cur=words[w];
+      el.textContent=cur.slice(0,c);
+      if(!del&&c<cur.length){c++;setTimeout(tick,90)}
+      else if(!del){del=true;setTimeout(tick,1400)}
+      else if(c>0){c--;setTimeout(tick,45)}
+      else{del=false;w=(w+1)%words.length;setTimeout(tick,300)}
+    })();
   }
-  buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
+
+  var items=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    items.forEach(function(i){io.observe(i)});
+  }else{items.forEach(function(i){i.classList.add('in')})}
+
+
+  var bar=document.getElementById('bar');
+  var links=[].slice.call(document.querySelectorAll('nav a[href^="#"]'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(h>0?window.scrollY/h:0)+')';
+    var cur=-1;
+    secs.forEach(function(sec,i){if(sec&&sec.getBoundingClientRect().top<=110)cur=i});
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4)cur=secs.length-1;
+    links.forEach(function(a,i){a.classList.toggle('active',i===cur)});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  var lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+  document.querySelectorAll('.shots img').forEach(function(im){im.addEventListener('click',function(){lbi.src=im.src;lb.classList.add('open')})});
+  lb.addEventListener('click',function(){lb.classList.remove('open')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+})();
 </script>
 </body>
 </html>
